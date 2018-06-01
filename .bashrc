@@ -113,6 +113,12 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# cd + ls
+cd ()
+{
+    builtin cd "$@" && ls
+}
+
 source /opt/ros/indigo/setup.bash
 #source ~/catkin_ws/devel/setup.bash
 #source ~/Documents/motoman_ws/devel/setup.bash
